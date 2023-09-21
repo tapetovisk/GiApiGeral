@@ -5,9 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace GiApiGeral
 {
-    public static class IoC
+    public static class NativeInjectorConfig
     {
-        public static void Load<t>(IServiceCollection services)
+        public static void RegisterServices(this IServiceCollection services)
         {
             services.AddSingleton<ICBOApi, CBOApi>();
             services.AddSingleton<ICentroCustoApi, CentroCustoApi>();
